@@ -30,14 +30,17 @@ from telegram.ext import (
 )
 
 # ---------------- CONFIG ----------------
-BOT_TOKEN = "7870355572:AAFHWAP5oLdwPg10jx5IGkZz6H_lMonuJL8"    # <-- replace with your BotFather token
-OWNER_ID = 6065778458                 # <-- replace with your Telegram numeric user id (admin)
+BOT_TOKEN = os.getenv("BOT_TOKEN")  # Bot token from Render Environment Variables
+OWNER_ID = int(os.getenv("OWNER_ID", "6065778458"))  # Admin user ID
+
 DATA_DIR = "data"
 USERS_FILE = "users.json"
 BACKUPS_DIR = "backups"
+
 UPTIME_START = time.time()
-SCHEMA_VERSION = 2                   # current schema version
-# ----------------------------------------
+SCHEMA_VERSION = 2  # Current schema version
+# ----------------------------- END CONFIG ----------------
+-----------
 
 # Ensure folders/files exist
 os.makedirs(DATA_DIR, exist_ok=True)
