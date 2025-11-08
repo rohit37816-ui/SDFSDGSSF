@@ -213,7 +213,8 @@ def main_menu_markup(user_id: int):
     ADD_TITLE, ADD_IMAGE, ADD_TEXT,
     EDIT_SELECT, EDIT_FIELD, EDIT_NEW,
     RESTORE_WAIT_FILE, SEARCH_QUERY
-) = range(20)
+) = range(8)
+
 
 # ---------- Command handlers ----------
 async def start_cmd(update: Update, context: ContextTypes.DEFAULT_TYPE):
