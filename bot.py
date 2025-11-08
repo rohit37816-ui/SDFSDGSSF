@@ -33,9 +33,9 @@ from telegram.ext import (
 BOT_TOKEN = os.getenv("BOT_TOKEN")  # Bot token from Render Environment Variables
 OWNER_ID = int(os.getenv("OWNER_ID", "6065778458"))  # Admin user ID
 
-DATA_DIR = "/data/data"
-BACKUPS_DIR = "/data/backups"
-USERS_FILE = "/data/users.json"
+DATA_DIR = "data"
+BACKUPS_DIR = "backups"
+USERS_FILE = "data/users.json"
 
 
 UPTIME_START = time.time()
