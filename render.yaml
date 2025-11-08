@@ -2,6 +2,28 @@ services:
   - type: worker
     name: text-saver-bot
     env: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python text_saver_bot.py"
     plan: free
+    autoDeploy: true
+
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+
+    startCommand: python text_saver_bot.py
+
+    envVars:
+      - key: BOT_TOKEN
+        sync: false        # You will manually set your BotFather token in Render Dashboard
+      - key: OWNER_ID
+        sync: false        # Set your Telegram numeric user ID in Render Dashboard
+
+    disk:
+      name: text-saver-data
+      mountPath: /data
+      sizeGB: 1
+
+    # Optional: health check disabled since this is a background bot
+    healthCheckPath: /
+    autoDeploy: true
+
+
