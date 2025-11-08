@@ -41,7 +41,6 @@ USERS_FILE = "data/users.json"
 UPTIME_START = time.time()
 SCHEMA_VERSION = 2  # Current schema version
 # ----------------------------- END CONFIG ----------------
------------
 
 # Ensure folders/files exist
 os.makedirs(DATA_DIR, exist_ok=True)
