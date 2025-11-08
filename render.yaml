@@ -1,0 +1,7 @@
+services:
+  - type: worker
+    name: text-saver-bot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python text_saver_bot.py"
+    plan: free
