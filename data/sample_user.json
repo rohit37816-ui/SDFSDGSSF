@@ -1,1 +1,8 @@
+{
+  "example_user": {
+    "title": "Sample Title",
+    "image": "https://via.placeholder.com/600x200.png?text=Sample+Banner",
+    "text": "This is a sample text. You can edit or delete it later."
+  }
+}
 
